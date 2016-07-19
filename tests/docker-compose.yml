@@ -1,0 +1,12 @@
+version: '2'
+services:
+  notifier:
+    image: andromedarabbit/codeship-slack-notifier
+    environment:
+      SLACK_WEBHOOK_TOKEN: MY_TOKEN
+      DEPLOY_TO: andromedarabbit/codeship-slack-notifier
+      CI_REPO_NAME: andromedarabbit/dockerized-codeship-slack-notifier
+      CI_BRANCH: master
+      CI_COMMIT_ID: test-commit-id
+    ports:
+      - 3306:4006

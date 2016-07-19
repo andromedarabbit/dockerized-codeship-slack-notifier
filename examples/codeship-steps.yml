@@ -1,0 +1,13 @@
+- type: serial
+  steps:
+    - type: serial
+      steps:
+      - name: deploy
+        service: app_dist
+        command: /bin/true
+        type: push
+        image_name: MY_IMAGE
+        image_tag: "{{ .Branch }}.{{ .CommitID }}"
+        registry: MY_REGISTRY
+      - name: notify
+        service: deploynotify

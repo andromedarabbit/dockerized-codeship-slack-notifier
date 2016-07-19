@@ -1,0 +1,9 @@
+app_dist:
+  build:
+    path: .
+    dockerfile_path: Dockerfile
+  cached: true
+
+deploynotify:
+  image: andromedarabbit/codeship-slack-notifier
+  encrypted_env_file: deploy.env.encrypted
