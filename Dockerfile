@@ -3,7 +3,6 @@ FROM alpine:latest
 MAINTAINER Jaehoon Choi <plaintext@andromedarabbit.net>
 
 RUN apk add --update curl && \
-    apk add --update bash && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /
