@@ -4,4 +4,31 @@
 
 # CodeShip Slack Notifier
 
-Docker image to send the deployment notification to Slack for CodeShip Docker infrastructure
+Docker image to send the deployment notification to Slack for CodeShip Docker infrastructure.
+
+## Usage
+
+### `codeship-steps.yml`
+
+```yaml
+- type: serial
+  steps:
+    - name: notify
+      service: deploynotify
+      command: /usr/local/bin/slack.sh
+```
+
+### `codeship-services.yml`
+
+```yaml
+deploynotify:
+  image: andromedarabbit/codeship-slack-notifier
+  encrypted_env_file: deploy.env.encrypted
+```
+
+### `deploy.env`
+
+```ini
+SLACK_WEBHOOK_TOKEN=MY_TOKEN
+DEPLOY_TO=MY_REGISTRY
+```

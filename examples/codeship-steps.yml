@@ -11,3 +11,4 @@
         registry: MY_REGISTRY
       - name: notify
         service: deploynotify
+        command: /usr/local/bin/slack.sh
