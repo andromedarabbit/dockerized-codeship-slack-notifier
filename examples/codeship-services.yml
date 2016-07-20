@@ -7,3 +7,4 @@ app_dist:
 deploynotify:
   image: andromedarabbit/codeship-slack-notifier
   encrypted_env_file: deploy.env.encrypted
+  cached: true
