@@ -32,3 +32,13 @@ deploynotify:
 SLACK_WEBHOOK_TOKEN=MY_TOKEN
 DEPLOY_TO=MY_REGISTRY
 ```
+
+## Message Customization
+
+### `deploy.env`
+
+```ini
+SLACK_WEBHOOK_TOKEN=MY_TOKEN
+SLACK_SUBJECT="*${CI_REPO_NAME}* is deployed!"
+SLACK_MESSAGE="Docker image was deployed to ${DEPLOY_TO}:${CI_BRANCH}.${CI_COMMIT_ID} from ${CI_NAME}"
+```

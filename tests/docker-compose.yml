@@ -1,7 +1,7 @@
 version: '2'
 services:
   notifier:
-    image: andromedarabbit/codeship-slack-notifier
+    image: andromedarabbit/codeship-slack-notifier:1.0.1
     environment:
       SLACK_WEBHOOK_TOKEN: MY_TOKEN
       DEPLOY_TO: andromedarabbit/codeship-slack-notifier
